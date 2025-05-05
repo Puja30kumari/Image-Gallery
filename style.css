@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 40px;
+}
+h1 {
+  margin: 40px 0;
+  font-size: 35px;
+  position: relative;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: crimson;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.top-content {
+  background: #f3f3f3;
+  width: 90%;
+  margin: auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px lightgray;
+}
+.top-content h3 {
+  padding-right: 20px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: crimson;
+  color: white;
+}
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 90%;
+  margin: 20px auto;
+}
+.pic {
+  height: 230px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 3px 5px lightgray;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Zoom popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100;
+}
+.popup img {
+  width: 60%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+.popup span {
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
