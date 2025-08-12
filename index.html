@@ -1,57 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photo Gallery</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>OUR PHOTO GALLERY</h1>
-
-      <div class="top-content">
-        <h3>Photo Gallery</h3>
-        <button data-filter="all">All Photos</button>
-        <button data-filter="family">Family Photos</button>
-        <button data-filter="child">Child Photos</button>
-        <button data-filter="place">Visited Places</button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyGallery | Create great designs, faster</title>
+  <meta name="description" content="Millions of free graphic resources. ✓ Photos ✓ AI images ✓ Vectors ✓ Icons ✓ Templates ✓ Videos.">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" type="image/png" />
+  <link rel="stylesheet" href="https://static.cdnpk.net/_next/static/css/81c4fc037517a2bf.css" />
+  <link rel="stylesheet" href="https://static.cdnpk.net/_next/static/css/80dd91a81ab65b6b.css" />
+  <link rel="stylesheet" href="https://static.cdnpk.net/_next/static/css/2b8e70871108053d.css" />
+  <link rel="stylesheet" href="https://static.cdnpk.net/_next/static/css/0d044f139ac48cb2.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
+</head>
+<body>
+  <div id="__next">
+    <!-- Navbar starts here -->
+    <nav class="main-navbar">
+      <div class="logo">
+        <a href="#" class="brand-stylish">MyGallery</a>
+      </div>              
+      <div class="nav-links">
+        <a href="#">Vectors</a>
+        <a href="#">Photos</a>
+        <a href="#">PSD</a>
+        <a href="#">Icons</a>
+        <a href="#">AI Tools</a>
       </div>
-
-      <div class="photo-gallery">
-        <div class="pic family"><img src="image/family1.jpeg" alt="" /></div>
-        <div class="pic family"><img src="image/family2.jpeg" alt="" /></div>
-        <div class="pic family"><img src="image/family3.jpeg" alt="" /></div>
-        <div class="pic family"><img src="image/family4.jpeg" alt="" /></div>
-        <div class="pic family"><img src="image/family5.jpeg" alt="" /></div>
-        <div class="pic family"><img src="image/family6.jpeg" alt="" /></div>
-
-        <div class="pic child"><img src="image/child1.jpeg" alt="" /></div>
-        <div class="pic child"><img src="image/child2.jpeg" alt="" /></div>
-        <div class="pic child"><img src="image/child3.jpeg" alt="" /></div>
-        <div class="pic child"><img src="image/child4.jpeg" alt="" /></div>
-        <div class="pic child"><img src="image/child5.jpeg" alt="" /></div>
-        <div class="pic child"><img src="image/child6.jpeg" alt="" /></div>
-        <div class="pic child"><img src="image/child7.jpeg" alt="" /></div>
-        <div class="pic child"><img src="image/child8.jpeg" alt="" /></div>
-
-        <div class="pic place"><img src="image/place1.jpeg" alt="" /></div>
-        <div class="pic place"><img src="image/place2.jpeg" alt="" /></div>
-        <div class="pic place"><img src="image/place3.jpeg" alt="" /></div>
-        <div class="pic place"><img src="image/place4.jpeg" alt="" /></div>
-        <div class="pic place"><img src="image/place5.jpeg" alt="" /></div>
-        <div class="pic place"><img src="image/place6.jpeg" alt="" /></div>
-        <div class="pic place"><img src="image/place7.jpeg" alt="" /></div>
-        <div class="pic place"><img src="image/place8.jpeg" alt="" /></div>
+      <div class="auth-buttons">
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
       </div>
-    </div>
+    </nav>
 
-    <!-- Popup for zoom -->
-    <div class="popup">
-      <span>&times;</span>
-      <img src="" alt="popup image" />
-    </div>
+    <!-- Search Section -->
+    <section class="search-section">
+      <h1>Discover Free Resources</h1>
+      <p>Find thousands of free vectors, stock photos, PSD & icons</p>
+      <div class="search-box">
+        <input type="text" placeholder="Search free resources..." />
+        <button>Search</button>
+      </div>
+      <div class="trending-tags">
+        <strong>Trending:</strong> Nature, Business, AI, Abstract, Education
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- Categories -->
+    <section class="categories">
+      <button>All</button>
+      <button>Backgrounds</button>
+      <button>Business</button>
+      <button>Technology</button>
+      <button>Nature</button>
+      <button>Education</button>
+      <button>People</button>
+    </section>
+
+    <section class="gallery">
+        <div class="card">
+          <img src="https://picsum.photos/300?1" alt="Abstract Background" />
+          <div class="card-info">
+            <p>Abstract Background</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300?2" alt="Nature Landscape" />
+          <div class="card-info">
+            <p>Nature Landscape</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300?3" alt="Office Setup" />
+          <div class="card-info">
+            <p>Office Setup</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300?4" alt="Team Meeting" />
+          <div class="card-info">
+            <p>Team Meeting</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300?5" alt="Futuristic Tech" />
+          <div class="card-info">
+            <p>Futuristic Tech</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/300?6" alt="AI Generated Art" />
+          <div class="card-info">
+            <p>AI Generated Art</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://www.mywbut.com/college_photo/bcroy/home.jpg" alt="BCREC" />
+          <div class="card-info">
+            <p>BCREC</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA93UeX-ha8PfOv0Lpim9lstbbCsV9gDrzmQ&s" alt="Technology" />
+          <div class="card-info">
+            <p>Analog Electronics Technology</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://plus.unsplash.com/premium_photo-1676490672166-008dd4113e90?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Backgrounds" />
+          <div class="card-info">
+            <p>Backgrounds</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://www.jurisiti.com/wp-content/uploads/2025/03/ed.png" alt="Education" />
+          <div class="card-info">
+            <p>Education</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1746230605205-89159f6530c2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beach" />
+          <div class="card-info">
+            <p>Beach</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://media.istockphoto.com/id/1472932742/photo/group-of-multigenerational-people-hugging-each-others-support-multiracial-and-diversity.jpg?s=612x612&w=0&k=20&c=Zm1MthU_G_LzfjBFBaMORRnuBhMsCjPQ38Ksfg4zl9g=" alt="People" />
+          <div class="card-info">
+            <p>People</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://mb.cision.com/Public/20251/4042861/a4ad2e189c33b8d2_800x800ar.jpg" alt="Business" />
+          <div class="card-info">
+            <p>Business</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDC4nomXdx9-hB8_AiFRMZqXWDb_5pcI0NYA&s" alt="Education" />
+          <div class="card-info">
+            <p>Book</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://plus.unsplash.com/premium_photo-1695055513545-c13fa9363ad6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Food" />
+          <div class="card-info">
+            <p>Food</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy_FvHAR3MLYok_ej1o30Zifol5c1j2MvgXA&s" alt="Groups" />
+          <div class="card-info">
+            <p>Groups</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1744630523255-015f3a5377ed?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Monuments" />
+          <div class="card-info">
+            <p>Monuments</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1745503262235-611b59926297?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Scienery" />
+          <div class="card-info">
+            <p>Scienery</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1626667701099-74ad86a4d1e7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mountains" />
+          <div class="card-info">
+            <p>Mountains</p>
+            <button>Download</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1745594151309-6c7d9172c7c3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beach" />
+          <div class="card-info">
+            <p>Beach</p>
+            <button>Download</button>
+          </div>
+        </div>
+      </section>
+      <section>
+
+        <div id="auth-modal" class="modal hidden">
+            <div class="modal-box">
+              <div class="modal-tabs">
+                <button class="tab-btn active" onclick="showForm('login')">Login</button>
+                <button class="tab-btn" onclick="showForm('signup')">Sign Up</button>
+              </div>
+              <span class="modal-close" onclick="closeModal()">&times;</span>
+          
+              <form id="login-form" class="auth-form">
+                <h2>Login to Your Account</h2>
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button type="submit">Login</button>
+              </form>
+          
+              <form id="signup-form" class="auth-form hidden">
+                <h2>Create a New Account</h2>
+                <input type="text" placeholder="Full Name" required />
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button type="submit">Sign Up</button>
+              </form>
+            </div>
+          </div>
+          
+          
+                </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">License</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </div>
+      <p>&copy; 2025 MyGallery. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
