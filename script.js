@@ -1,34 +1,78 @@
-// Filtering logic
-const buttons = document.querySelectorAll(".top-content button");
-const pics = document.querySelectorAll(".photo-gallery .pic");
+// ====== Filter by Search Input ======
+const searchInput = document.querySelector('.search-box input');
+const cards = document.querySelectorAll('.card');
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.getAttribute("data-filter");
-    pics.forEach((pic) => {
-      if (filter === "all" || pic.classList.contains(filter)) {
-        pic.style.display = "block";
+searchInput.addEventListener('input', () => {
+  const term = searchInput.value.toLowerCase();
+  cards.forEach(card => {
+    const title = card.querySelector('p').textContent.toLowerCase();
+    card.style.display = title.includes(term) ? 'block' : 'none';
+  });
+});
+
+// ====== Filter by Category Buttons ======
+const categoryButtons = document.querySelectorAll('.categories button');
+
+categoryButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const category = button.textContent.toLowerCase();
+    
+    cards.forEach(card => {
+      const title = card.querySelector('p').textContent.toLowerCase();
+      if (category === 'all' || title.includes(category)) {
+        card.style.display = 'block';
       } else {
-        pic.style.display = "none";
+        card.style.display = 'none';
       }
     });
   });
 });
 
-// Zoom image on click
-const popup = document.querySelector(".popup");
-const popupImg = document.querySelector(".popup img");
-const popupClose = document.querySelector(".popup span");
+// ====== Download Button Logic ======
+const downloadButtons = document.querySelectorAll('.card-info button');
 
-pics.forEach((pic) => {
-  pic.addEventListener("click", () => {
-    const imgSrc = pic.querySelector("img").getAttribute("src");
-    popupImg.setAttribute("src", imgSrc);
-
-    popup.style.display = "flex";
+downloadButtons.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    const image = cards[index].querySelector('img');
+    const link = document.createElement('a');
+    link.href = image.src;
+    link.download = `image-${index + 1}.jpg`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   });
 });
+const authModal = document.getElementById('auth-modal');
+const loginBtn = document.querySelector('.login-btn');
+const signupBtn = document.querySelector('.signup-btn');
+const loginForm = document.getElementById('login-form');
+const signupForm = document.getElementById('signup-form');
 
-popupClose.addEventListener("click", () => {
-  popup.style.display = "none";
+loginBtn.addEventListener('click', () => {
+  authModal.classList.remove('hidden');
+  showForm('login');
 });
+
+signupBtn.addEventListener('click', () => {
+  authModal.classList.remove('hidden');
+  showForm('signup');
+});
+
+function closeModal() {
+  authModal.classList.add('hidden');
+}
+
+function showForm(type) {
+  const tabs = document.querySelectorAll('.tab-btn');
+  tabs.forEach(btn => btn.classList.remove('active'));
+
+  if (type === 'login') {
+    loginForm.classList.remove('hidden');
+    signupForm.classList.add('hidden');
+    tabs[0].classList.add('active');
+  } else {
+    loginForm.classList.add('hidden');
+    signupForm.classList.remove('hidden');
+    tabs[1].classList.add('active');
+  }
+}
